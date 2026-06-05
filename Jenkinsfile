@@ -24,7 +24,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 bat 'docker rm -f myapp || exit 0'
-                bat 'docker run -d --name myapp -p 8080:80 myapp:latest'
+                bat 'docker run -d --name myapp -p 8081:80 myapp:latest'
                 bat 'docker ps'
             }
         }
